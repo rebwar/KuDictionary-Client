@@ -1,0 +1,32 @@
+@page "/words"
+
+@if (kuDictionaries == null)
+{
+    <h1>Loading</h1>
+}
+else
+{
+
+    <div class="row">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>کوردی</td>
+                    <td>فارسی</td>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in kuDictionaries)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Kurdish</td>
+                    <td>@item.Farsi</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
